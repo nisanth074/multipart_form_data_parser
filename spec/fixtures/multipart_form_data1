@@ -1,0 +1,76 @@
+--xYzZY
+Content-Disposition: form-data; name="dkim"
+
+{@gmail.com : pass}
+--xYzZY
+Content-Disposition: form-data; name="subject"
+
+Another test email
+--xYzZY
+Content-Disposition: form-data; name="email"
+
+Received: by mx0077p1las1.sendgrid.net with SMTP id 7Vo8VXSmul Sun, 28 Aug 2022 19:40:09 +0000 (UTC)
+Received: from mail-vk1-f173.google.com (unknown [209.85.221.173]) by mx0077p1las1.sendgrid.net (Postfix) with ESMTPS id CFC253E0E39 for <btquhrzinvxyenqclwfvosreux@sparrow.xyz>; Sun, 28 Aug 2022 19:40:09 +0000 (UTC)
+Received: by mail-vk1-f173.google.com with SMTP id w129so2902645vkg.10 for <btquhrzinvxyenqclwfvosreux@sparrow.xyz>; Sun, 28 Aug 2022 12:40:09 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20210112; h=to:subject:message-id:date:from:mime-version:dkim-signature :delivered-to:x-gm-message-state:from:to:cc; bh=ugBLzYvhaRPCx4sfqYCm9nQm6jP+LGjxOP2np71w6Ks=; b=Mb971OWqI94bERo0nFTAICrUWWEUFaGmiOJkZtH99HPeDHcZSKc0Ohi5Q6ydtJc9fS +t1sWrmKr2duUIGG1TN16pphvblf2vAkzCkv8ffoPTKw5c4bcMMrlRcjKZc8wXZIwZoj cbXWAptoXVHksWaRH44BPkxqowLrTeo85Gcuhky2e1nneRDKhcZa/dh4shndjbzj5tad 1cOhYqXSIq5LhCgtdvXr3j7M+gxYKnMRJ1rpQH6cGcHWy9H2PHwjIC9TaRwQYf8y7l+T Yt6wUfd5gVckSeZ0vvliznB4oCsn8Y9Vym4OYmJi7JoM2psZtOK1cdfpUfIix2cOMqTG VOAw==
+X-Gm-Message-State: ACgBeo1uSzDqfKKjBKJOTZVJCiZsQ0M/uDzpVM0v1xKbUuUCNf/0uGCj iepWqH/Cq65eVl7v30MwmjkE+HEBw9IgMThE4Itjvc/et0s2S3WolQ==
+X-Received: by 2002:a1f:9002:0:b0:377:1433:93e9 with SMTP id s2-20020a1f9002000000b00377143393e9mr2279849vkd.28.1661715609178; Sun, 28 Aug 2022 12:40:09 -0700 (PDT)
+X-Forwarded-To: btquhrzinvxyenqclwfvosreux@sparrow.xyz
+X-Forwarded-For: instatransferhelp@gmail.com btquhrzinvxyenqclwfvosreux@sparrow.xyz
+Delivered-To: instatransferhelp@gmail.com
+Received: by 2002:a59:cb6d:0:b0:2e7:5a24:a1c2 with SMTP id c13csp1503929vqv; Sun, 28 Aug 2022 12:40:08 -0700 (PDT)
+X-Received: by 2002:a17:90b:3e84:b0:1fd:ce48:979 with SMTP id rj4-20020a17090b3e8400b001fdce480979mr1730111pjb.54.1661715608222; Sun, 28 Aug 2022 12:40:08 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1661715608; cv=none; d=google.com; s=arc-20160816; b=iBVH02N4Tq9HQBMSOSTMpMpwd9wm4OsBiHwoXTFFXBaCC2h4ZgZqBKzTufEWdpgKzw oT0r8UOKQZBWrB542+ps+srWFKGmgKVrDa8ExF8KQXseCmw26/++ZdGnYG9SRbGAT+ha TpbA5huneFPE3DaW1pQRfQQykDE+3cFljAhuN4vrPqfpm3UPTjC8F2Hc7dCB80B5e/Sk Z15dCmBWLg3OVdI8Jnzx6Z8NrvjGj/v+iEDYuwHDcmlz9sIueBsHn9mmnIRne1KcDnST BZvu8QrR/AFwxtz1BsiHwcofU0fgoydRgzZZIK6bvOaEkOeizR1ID+JlBnQ3zfg/KDJl 2ueg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816; h=to:subject:message-id:date:from:mime-version:dkim-signature; bh=ugBLzYvhaRPCx4sfqYCm9nQm6jP+LGjxOP2np71w6Ks=; b=PzKG23KKY7P3ivYLvnDebMiEedFXfsJXnftw/G+lW+f0ltuNxqRqNB0EIbrK3nYbUT XPaQZGK1sgSsbaMz/s8Q+qcd8QMALCNuXEWGaiNtrskJiKLrxOlrcc9mHDYcTkplfRxF kL4WPIFvbhboLeko47GWybyhTTZAaoF68eIfsD7OgBM85BX7HoxD0aSjsr6fnQLFD31i 2Uf+E17MQKl2OQ714OdNLDUAdyf4a/kopkTuMJ4AFO2iWdVkDkp/2x2PLgIMxJ3bU+tl l+xByzJkE9WCl3CxVIoY0TXnqb7yjHsebz9m+ZVfCTS7DfrKktKBT0GCuFlqYVQPI1KH HdbA==
+ARC-Authentication-Results: i=1; mx.google.com; dkim=pass header.i=@gmail.com header.s=20210112 header.b=MTfldSmf; spf=pass (google.com: domain of johndoe@example.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=johndoe@example.com; dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41]) by mx.google.com with SMTPS id k2-20020a170902d58200b00174bf160ae8sor395364plh.159.2022.08.28.12.40.08 for <instatransferhelp@gmail.com> (Google Transport Security); Sun, 28 Aug 2022 12:40:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of johndoe@example.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com; dkim=pass header.i=@gmail.com header.s=20210112 header.b=MTfldSmf; spf=pass (google.com: domain of johndoe@example.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=johndoe@example.com; dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112; h=to:subject:message-id:date:from:mime-version:from:to:cc; bh=ugBLzYvhaRPCx4sfqYCm9nQm6jP+LGjxOP2np71w6Ks=; b=MTfldSmf3BSRkH1NC0LVxLkbLPDTpBjluh0jaVp2RUAMUEgNhxzggJoi9sBWUS19OQ iw40CHukwHM+q4x/lXX7JhCggNnQnhJ6Huv/HHD+/Biv8Flewl4aVNBamiqo+nuuqt83 PPBU9VnaEsGUG6nBORY27zdTckNncBVbH1ylhLAZ+H53rFY3EvyjO8BHKUnS0CQQyN5+ y4Rdk/QgU8mLrgvijWTAejWdd19RZBsTk18oJIO0cjy60eTAb72TjCL9DLC39GyAO/gi VO4BmHV1p8l/Ss6q5SJE7wvzW5ZLGYrCqH62GKcoffZVv3W8pUL/Axt1lGp7PQXqtRcY L4Pg==
+X-Google-Smtp-Source: AA6agR7VcHU2eSkhsMC/vcmQcStt/nrh7kFRdxaHjScRDEIbunDKkhEVFCtz/CV//CpW3j0To1493IuQ7/bIsQjA0FE=
+X-Received: by 2002:a17:902:c40e:b0:172:dee4:882e with SMTP id k14-20020a170902c40e00b00172dee4882emr13256824plk.11.1661715607630; Sun, 28 Aug 2022 12:40:07 -0700 (PDT)
+MIME-Version: 1.0
+From: John Doe <johndoe@example.com>
+Date: Mon, 29 Aug 2022 01:09:41 +0530
+Message-ID: <CAJ5v_Ufn9SEAuGOCeYaR27MN082hHY7+WoCEtEZuf3AYoxsu8g@mail.gmail.com>
+Subject: Another test email
+To: Insta Transfer Help <instatransferhelp@gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000082b96905e75250e5"
+
+--00000000000082b96905e75250e5
+Content-Type: text/plain; charset="UTF-8"
+
+Another test email
+
+--00000000000082b96905e75250e5
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">Another test email</div>
+
+--00000000000082b96905e75250e5--
+
+--xYzZY
+Content-Disposition: form-data; name="to"
+
+Insta Transfer Help <instatransferhelp@gmail.com>
+--xYzZY
+Content-Disposition: form-data; name="from"
+
+John Doe <johndoe@example.com>
+--xYzZY
+Content-Disposition: form-data; name="sender_ip"
+
+209.85.221.173
+--xYzZY
+Content-Disposition: form-data; name="envelope"
+
+{"to":["btquhrzinvxyenqclwfvosreux@sparrow.xyz"],"from":"instatransferhelp+caf_=btquhrzinvxyenqclwfvosreux=sparrow.xyz@gmail.com"}
+--xYzZY
+Content-Disposition: form-data; name="charsets"
+
+{"to":"UTF-8","subject":"UTF-8","from":"UTF-8"}
+--xYzZY
+Content-Disposition: form-data; name="SPF"
+
+pass
+--xYzZY--
