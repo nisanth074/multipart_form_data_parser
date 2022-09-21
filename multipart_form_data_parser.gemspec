@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.version       = MultipartFormDataParser::VERSION
   s.authors       = ["Nisanth Chunduru"]
   s.email         = ["nisanth074@gmail.com"]
-  s.homepage      = "https://github.com/nisanth074/c"
+  s.homepage      = "https://github.com/nisanth074/multipart_form_data_parser"
   s.summary       = "Multipart form data parser"
   s.description   = "Multipart form data parser"
 
